@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct SearchView: View {
-    init() {
-        UITableView.appearance().backgroundColor = .white
+
+    var items: [GridItem] {
+      Array(repeating: .init(.adaptive(minimum: 120)), count: 2)
     }
     @State private var searchText : String = ""
     let cars = ["Subaru WRX", "Tesla Model 3", "Porsche 911", "Renault Zoe", "DeLorean"]
@@ -17,9 +18,11 @@ struct SearchView: View {
         NavigationView {
                     VStack {
                         SearchBar(text: $searchText)
-                        List {
+                        ScrollView {
                             ForEach(self.cars, id: \.self) { car in
-                                Text(car)
+                                LazyVGrid(columns: items,spacing:20){
+                                    Text(car)
+                                }
                             }
                         }.navigationBarTitle(Text("Apple Student"))
                     }

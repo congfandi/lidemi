@@ -17,7 +17,6 @@ struct TeamHistoryView: View {
                         .fill(Color.black)
                         .frame(width: 150, height: 150)
                     Text("TEAM 1").bold().foregroundColor(.white)
-                    
                 }
                 Text("Mentor").bold().font(.title2).padding(.top)
                 Text("Ari Qurniawan").font(.body)

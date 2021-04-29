@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F715C29C263B7D0300E032AF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F715C29B263B7D0300E032AF /* CloudKit.framework */; };
 		F75332CA2638F1A2009DDF3B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75332C92638F1A2009DDF3B /* SignInView.swift */; };
 		F75332DD2638F85F009DDF3B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75332DC2638F85F009DDF3B /* SplashView.swift */; };
 		F7847BCE2638FE9C00AC5060 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7847BCD2638FE9C00AC5060 /* MainView.swift */; };
@@ -24,6 +25,7 @@
 		F7A2AB582639F00F00789114 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2AB572639F00F00789114 /* SearchBar.swift */; };
 		F7A2AB5E263A07D000789114 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2AB5D263A07D000789114 /* ProfileView.swift */; };
 		F7A2AB6C263A6EB100789114 /* TeamHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2AB6B263A6EB100789114 /* TeamHistoryView.swift */; };
+		F7A2AB74263A9B2C00789114 /* NotificationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2AB73263A9B2C00789114 /* NotificationDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F715C296263B7CD300E032AF /* Lidemi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lidemi.entitlements; sourceTree = "<group>"; };
+		F715C29B263B7D0300E032AF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F75332C92638F1A2009DDF3B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		F75332DC2638F85F009DDF3B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		F7847BCD2638FE9C00AC5060 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 		F7A2AB572639F00F00789114 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		F7A2AB5D263A07D000789114 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F7A2AB6B263A6EB100789114 /* TeamHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamHistoryView.swift; sourceTree = "<group>"; };
+		F7A2AB73263A9B2C00789114 /* NotificationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F715C29C263B7D0300E032AF /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F715C29A263B7D0300E032AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F715C29B263B7D0300E032AF /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F75332CE2638F3C5009DDF3B /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,11 +131,11 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		F75332D02638F3DD009DDF3B /* Controllers */ = {
+		F75332D02638F3DD009DDF3B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Controllers;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		F75332E92638F8BE009DDF3B /* Authenticate */ = {
@@ -145,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				F7847C1D263939FA00AC5060 /* NotificationView.swift */,
+				F7A2AB73263A9B2C00789114 /* NotificationDetailView.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -173,6 +188,7 @@
 				F7998DEC2637CD54003804BB /* LidemiTests */,
 				F7998DF72637CD54003804BB /* LidemiUITests */,
 				F7998DD92637CD53003804BB /* Products */,
+				F715C29A263B7D0300E032AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,7 +205,8 @@
 		F7998DDA2637CD53003804BB /* Lidemi */ = {
 			isa = PBXGroup;
 			children = (
-				F75332D02638F3DD009DDF3B /* Controllers */,
+				F715C296263B7CD300E032AF /* Lidemi.entitlements */,
+				F75332D02638F3DD009DDF3B /* ViewModels */,
 				F75332CF2638F3D1009DDF3B /* Models */,
 				F75332CE2638F3C5009DDF3B /* Views */,
 				F7998DDB2637CD53003804BB /* LidemiApp.swift */,
@@ -374,6 +391,7 @@
 				F7847BCE2638FE9C00AC5060 /* MainView.swift in Sources */,
 				F7998DDE2637CD53003804BB /* ContentView.swift in Sources */,
 				F7847C13263930FD00AC5060 /* TermAndServiceView.swift in Sources */,
+				F7A2AB74263A9B2C00789114 /* NotificationDetailView.swift in Sources */,
 				F7A2AB582639F00F00789114 /* SearchBar.swift in Sources */,
 				F7998DDC2637CD53003804BB /* LidemiApp.swift in Sources */,
 				F7A2AB6C263A6EB100789114 /* TeamHistoryView.swift in Sources */,
@@ -533,6 +551,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Lidemi/Lidemi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Lidemi/Preview Content\"";
 				DEVELOPMENT_TEAM = GW42C65689;
@@ -555,6 +574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Lidemi/Lidemi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Lidemi/Preview Content\"";
 				DEVELOPMENT_TEAM = GW42C65689;
