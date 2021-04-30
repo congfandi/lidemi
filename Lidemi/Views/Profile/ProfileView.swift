@@ -6,10 +6,24 @@
 //
 
 import SwiftUI
-
+import CoreImage.CIFilterBuiltins
 struct ProfileView: View {
     var teams:[String] = ["TEAM 1","TEAM 2","TEAM 3"]
+    let context = CIContext()
+    let filter = CIFilter.qrCodeGenerator()
+    
+    func generateQRCode(from string: String) -> UIImage {
+        let data = Data(string.utf8)
+        filter.setValue(data, forKey: "inputMessage")
 
+        if let outputImage = filter.outputImage {
+            if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+                return UIImage(cgImage: cgimg)
+            }
+        }
+
+        return UIImage(systemName: "xmark.circle") ?? UIImage()
+    }
     var body: some View {
             ZStack{
                 ScrollView{
@@ -35,7 +49,7 @@ struct ProfileView: View {
                         Spacer()
                         VStack{
                             HStack{
-                                Image(systemName: "chevron.down.circle.fill").foregroundColor(.gray)
+                                Image(systemName: "face.dashed").foregroundColor(.gray)
                                 Text("EXPERTISE").font(.headline).foregroundColor(.gray)
                             }
                             Text("IT/TECH/IS")
@@ -78,19 +92,21 @@ struct ProfileView: View {
                     Text("Team History").bold().font(.title2).padding(.top)
                     VStack{
                         ForEach(teams,id:\.self){team in
-                            NavigationLink(destination:TeamView()){
+                        
                                 HStack{
                                     Text(team)
                                     Spacer()
-                                    Image(systemName: "chevron.right").foregroundColor(.gray)
                                 }
                                 .padding(.horizontal)
-                            }
                             Divider()
                         }
                     }
-                    .padding(.top)
-                    Image("barcode")
+                    .padding(.vertical)
+                    Image(uiImage: generateQRCode(from: "congfandi@gmail.com"))
+                        .interpolation(.none)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
                     Text("Reach me in").bold().font(.title2).padding(.top)
                     HStack{
                         Spacer()

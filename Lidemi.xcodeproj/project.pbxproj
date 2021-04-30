@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F715C29C263B7D0300E032AF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F715C29B263B7D0300E032AF /* CloudKit.framework */; };
+		F715C2A1263B7EF700E032AF /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2A0263B7EF700E032AF /* Student.swift */; };
 		F75332CA2638F1A2009DDF3B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75332C92638F1A2009DDF3B /* SignInView.swift */; };
 		F75332DD2638F85F009DDF3B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75332DC2638F85F009DDF3B /* SplashView.swift */; };
 		F7847BCE2638FE9C00AC5060 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7847BCD2638FE9C00AC5060 /* MainView.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		F715C296263B7CD300E032AF /* Lidemi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lidemi.entitlements; sourceTree = "<group>"; };
 		F715C29B263B7D0300E032AF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		F715C2A0263B7EF700E032AF /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		F75332C92638F1A2009DDF3B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		F75332DC2638F85F009DDF3B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		F7847BCD2638FE9C00AC5060 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		F75332CF2638F3D1009DDF3B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F715C2A0263B7EF700E032AF /* Student.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				F7A2AB74263A9B2C00789114 /* NotificationDetailView.swift in Sources */,
 				F7A2AB582639F00F00789114 /* SearchBar.swift in Sources */,
 				F7998DDC2637CD53003804BB /* LidemiApp.swift in Sources */,
+				F715C2A1263B7EF700E032AF /* Student.swift in Sources */,
 				F7A2AB6C263A6EB100789114 /* TeamHistoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TeamView: View {
-    var teams:[String] = ["Cong Fandi","Fredo","Goldy","Ali","Stephanie"]
+    var teams:[String] = ["Cong Fandi","Fredo","Goldy","Ali","Stephanie","Orang baru"]
     var teamHistory:[String] = ["Team 7","Team 3"]
     var body: some View{
         NavigationView{
@@ -20,7 +20,7 @@ struct TeamView: View {
                     Text("TEAM 1").bold().foregroundColor(.white)
                 }
                 Text("Mentor").bold().font(.title2).padding(.top)
-                Text("Ari Qurniawan").font(.body)
+                Text("Fandi").font(.body)
                 Text("Team Member").bold().font(.title2).padding(.top)
                 VStack{
                     ForEach(teams,id:\.self){ team in
