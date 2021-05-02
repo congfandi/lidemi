@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import AuthenticationServices
 struct SignInView: View {
     var body: some View {
         NavigationView{
@@ -16,30 +16,33 @@ struct SignInView: View {
                     Spacer()
                     SplashView()
                     Spacer()
-                    NavigationLink(destination:MainView()){
                         HStack{
-//                            Button(action: {
-//
-//                            }) {
-//                                HStack{
-//                                    Image(systemName: "applelogo").foregroundColor(.white)
-//                                    Text("Sign In With Apple")
-//                                        .fontWeight(.bold)
-//                                        .font(.body)
-//                                        .foregroundColor(.white)
-//                                }
-//                            }
-                            Image(systemName: "applelogo").foregroundColor(.white)
-                            Text("Sign In With Apple")
-                                .fontWeight(.bold)
-                                .font(.body)
-                                .foregroundColor(.white)
+                            Button(action: {
+                                   let provider = ASAuthorizationAppleIDProvider()
+                                   let request = provider.createRequest()
+                                   request.requestedScopes = [.fullName, .email]
+                                   let controller = ASAuthorizationController(authorizationRequests: [request])
+                                   controller.performRequests()
+                                   //
+                                print("yang login \(String(describing: request.user))")
+                            }) {
+                                HStack{
+                                    Image(systemName: "applelogo").foregroundColor(.white)
+                                    Text("Sign In With Apple")
+                                        .fontWeight(.bold)
+                                        .font(.body)
+                                        .foregroundColor(.white)
+                                }
+                            }
                         }.padding()
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color.white, lineWidth: 3)
                         )
-                    }.navigationBarHidden(true)
+                    Text("Or").foregroundColor(.white).padding(.vertical)
+                    Button(action:{}){
+                        Text("Continue as Guest")
+                    }
                     Spacer()
                     Text("By  Sign In, you have been agree our").foregroundColor(.white)
                     NavigationLink(

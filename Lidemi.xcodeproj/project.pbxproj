@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		F715C29C263B7D0300E032AF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F715C29B263B7D0300E032AF /* CloudKit.framework */; };
 		F715C2A1263B7EF700E032AF /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2A0263B7EF700E032AF /* Student.swift */; };
+		F715C2AE263DF87A00E032AF /* GolbalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2AD263DF87A00E032AF /* GolbalViewModel.swift */; };
+		F715C2B8263E1C5400E032AF /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2B7263E1C5400E032AF /* TeamViewModel.swift */; };
+		F715C2C0263E1C8400E032AF /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2BF263E1C8400E032AF /* ProfileViewModel.swift */; };
+		F715C2C5263E1CA600E032AF /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2C4263E1CA600E032AF /* SearchViewModel.swift */; };
+		F715C2CA263E1CC200E032AF /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2C9263E1CC200E032AF /* NotificationViewModel.swift */; };
+		F715C2CF263E1CE400E032AF /* AuthenticateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2CE263E1CE400E032AF /* AuthenticateViewModel.swift */; };
+		F715C2D9263EF62A00E032AF /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2D8263EF62A00E032AF /* FilterView.swift */; };
 		F75332CA2638F1A2009DDF3B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75332C92638F1A2009DDF3B /* SignInView.swift */; };
 		F75332DD2638F85F009DDF3B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75332DC2638F85F009DDF3B /* SplashView.swift */; };
 		F7847BCE2638FE9C00AC5060 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7847BCD2638FE9C00AC5060 /* MainView.swift */; };
@@ -50,6 +57,13 @@
 		F715C296263B7CD300E032AF /* Lidemi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lidemi.entitlements; sourceTree = "<group>"; };
 		F715C29B263B7D0300E032AF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F715C2A0263B7EF700E032AF /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		F715C2AD263DF87A00E032AF /* GolbalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolbalViewModel.swift; sourceTree = "<group>"; };
+		F715C2B7263E1C5400E032AF /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
+		F715C2BF263E1C8400E032AF /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		F715C2C4263E1CA600E032AF /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		F715C2C9263E1CC200E032AF /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		F715C2CE263E1CE400E032AF /* AuthenticateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateViewModel.swift; sourceTree = "<group>"; };
+		F715C2D8263EF62A00E032AF /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		F75332C92638F1A2009DDF3B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		F75332DC2638F85F009DDF3B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		F7847BCD2638FE9C00AC5060 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -110,6 +124,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F715C2B2263E12E100E032AF /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				F715C2B7263E1C5400E032AF /* TeamViewModel.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		F715C2B3263E12F000E032AF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F715C2BF263E1C8400E032AF /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F715C2B4263E12F700E032AF /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F715C2C4263E1CA600E032AF /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		F715C2B5263E130100E032AF /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				F715C2C9263E1CC200E032AF /* NotificationViewModel.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		F715C2B6263E130F00E032AF /* Authenticate */ = {
+			isa = PBXGroup;
+			children = (
+				F715C2CE263E1CE400E032AF /* AuthenticateViewModel.swift */,
+			);
+			path = Authenticate;
+			sourceTree = "<group>";
+		};
 		F75332CE2638F3C5009DDF3B /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +191,12 @@
 		F75332D02638F3DD009DDF3B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F715C2B6263E130F00E032AF /* Authenticate */,
+				F715C2B5263E130100E032AF /* Notification */,
+				F715C2B4263E12F700E032AF /* Search */,
+				F715C2B3263E12F000E032AF /* Profile */,
+				F715C2B2263E12E100E032AF /* Team */,
+				F715C2AD263DF87A00E032AF /* GolbalViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -172,6 +232,7 @@
 			children = (
 				F7847C2626393A5B00AC5060 /* SearchView.swift */,
 				F7A2AB572639F00F00789114 /* SearchBar.swift */,
+				F715C2D8263EF62A00E032AF /* FilterView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -384,19 +445,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F715C2D9263EF62A00E032AF /* FilterView.swift in Sources */,
 				F75332CA2638F1A2009DDF3B /* SignInView.swift in Sources */,
+				F715C2CA263E1CC200E032AF /* NotificationViewModel.swift in Sources */,
 				F7847C3026393A9C00AC5060 /* SettingView.swift in Sources */,
 				F7847C2726393A5B00AC5060 /* SearchView.swift in Sources */,
+				F715C2CF263E1CE400E032AF /* AuthenticateViewModel.swift in Sources */,
 				F75332DD2638F85F009DDF3B /* SplashView.swift in Sources */,
+				F715C2C5263E1CA600E032AF /* SearchViewModel.swift in Sources */,
 				F7A2AB5E263A07D000789114 /* ProfileView.swift in Sources */,
 				F7847C182639382F00AC5060 /* TeamView.swift in Sources */,
 				F7847C1E263939FA00AC5060 /* NotificationView.swift in Sources */,
+				F715C2B8263E1C5400E032AF /* TeamViewModel.swift in Sources */,
 				F7847BCE2638FE9C00AC5060 /* MainView.swift in Sources */,
 				F7998DDE2637CD53003804BB /* ContentView.swift in Sources */,
 				F7847C13263930FD00AC5060 /* TermAndServiceView.swift in Sources */,
 				F7A2AB74263A9B2C00789114 /* NotificationDetailView.swift in Sources */,
+				F715C2C0263E1C8400E032AF /* ProfileViewModel.swift in Sources */,
 				F7A2AB582639F00F00789114 /* SearchBar.swift in Sources */,
 				F7998DDC2637CD53003804BB /* LidemiApp.swift in Sources */,
+				F715C2AE263DF87A00E032AF /* GolbalViewModel.swift in Sources */,
 				F715C2A1263B7EF700E032AF /* Student.swift in Sources */,
 				F7A2AB6C263A6EB100789114 /* TeamHistoryView.swift in Sources */,
 			);

@@ -8,12 +8,6 @@
 import SwiftUI
 
 struct SearchView: View {
-    init() {
-       
-    }
-    var items: [GridItem] {
-      Array(repeating: .init(.adaptive(minimum: 120)), count: 2)
-    }
     @State private var searchText : String = ""
     var students:[Student] = [
         Student(id: "1", shift: "Morning", expertise: "Teach/IT/IS", team: "Team 1", project: "Lidemi", whatsapp: "6287832442424", instagram: "@thengoding", facebook: "congfandii", gender: "Male", dateOfBirth: "15/10/1994",name: "Moh Supandi",photo: "fandi"),
@@ -28,10 +22,19 @@ struct SearchView: View {
         Student(id: "10", shift: "Morning", expertise: "Teach/IT/IS", team: "Team 10", project: "Lidemi", whatsapp: "6287832442424", instagram: "@thengoding", facebook: "congfandii", gender: "Male", dateOfBirth: "15/10/1994",name: "Moh Supandi10",photo: "fandi"),
         Student(id: "11", shift: "Morning", expertise: "Teach/IT/IS", team: "Team 11", project: "Lidemi", whatsapp: "6287832442424", instagram: "@thengoding", facebook: "congfandii", gender: "Male", dateOfBirth: "15/10/1994",name: "Moh Supandi11",photo: "fandi")
     ]
+    @State private var favoriteColor = 0
+    private let searchVM:SearchViewModel = SearchViewModel()
     var body: some View {
         NavigationView {
                     VStack {
                         SearchBar(text: $searchText)
+                        Picker(selection: $favoriteColor, label: Text("What is your favorite color?")) {
+                                        Text("Surabaya").tag(0)
+                                        Text("Jakarta").tag(1)
+                                        Text("Batam").tag(2)
+                        }
+                        .padding(.horizontal)
+                                    .pickerStyle(SegmentedPickerStyle())
                         List{
                             ForEach(students,id:\.id){ student in
                                 NavigationLink(destination:ProfileView()){
@@ -66,6 +69,9 @@ struct SearchView: View {
                             }
                         }
                         }.navigationBarTitle(Text("Apple Student"))
+                        .navigationBarItems(trailing: NavigationLink(destination:FilterView(searchVM: searchVM)){
+                        Text("Filter")
+                    })
                     }
                 }
     }

@@ -10,11 +10,11 @@ import SwiftUI
 struct SplashView: View {
     var body: some View {
         VStack{
-            Text("LIDEMI")
+            Text("SIAPA")
                 .foregroundColor(.white)
                 .font(.title)
                 .bold()
-            Text("Link Developer Academi").foregroundColor(.white)
+            Text("System Integration of \nApple Programe Academi Indonesia").foregroundColor(.white).multilineTextAlignment(.center)
         }
     }
 }
