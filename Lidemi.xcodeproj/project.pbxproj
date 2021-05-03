@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F715C29C263B7D0300E032AF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F715C29B263B7D0300E032AF /* CloudKit.framework */; };
 		F715C2A1263B7EF700E032AF /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2A0263B7EF700E032AF /* Student.swift */; };
-		F715C2AE263DF87A00E032AF /* GolbalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2AD263DF87A00E032AF /* GolbalViewModel.swift */; };
+		F715C2AE263DF87A00E032AF /* GlobalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2AD263DF87A00E032AF /* GlobalViewModel.swift */; };
 		F715C2B8263E1C5400E032AF /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2B7263E1C5400E032AF /* TeamViewModel.swift */; };
 		F715C2C0263E1C8400E032AF /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2BF263E1C8400E032AF /* ProfileViewModel.swift */; };
 		F715C2C5263E1CA600E032AF /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2C4263E1CA600E032AF /* SearchViewModel.swift */; };
@@ -57,7 +57,7 @@
 		F715C296263B7CD300E032AF /* Lidemi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lidemi.entitlements; sourceTree = "<group>"; };
 		F715C29B263B7D0300E032AF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F715C2A0263B7EF700E032AF /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
-		F715C2AD263DF87A00E032AF /* GolbalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolbalViewModel.swift; sourceTree = "<group>"; };
+		F715C2AD263DF87A00E032AF /* GlobalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewModel.swift; sourceTree = "<group>"; };
 		F715C2B7263E1C5400E032AF /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
 		F715C2BF263E1C8400E032AF /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		F715C2C4263E1CA600E032AF /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 				F715C2B4263E12F700E032AF /* Search */,
 				F715C2B3263E12F000E032AF /* Profile */,
 				F715C2B2263E12E100E032AF /* Team */,
-				F715C2AD263DF87A00E032AF /* GolbalViewModel.swift */,
+				F715C2AD263DF87A00E032AF /* GlobalViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -464,7 +464,7 @@
 				F715C2C0263E1C8400E032AF /* ProfileViewModel.swift in Sources */,
 				F7A2AB582639F00F00789114 /* SearchBar.swift in Sources */,
 				F7998DDC2637CD53003804BB /* LidemiApp.swift in Sources */,
-				F715C2AE263DF87A00E032AF /* GolbalViewModel.swift in Sources */,
+				F715C2AE263DF87A00E032AF /* GlobalViewModel.swift in Sources */,
 				F715C2A1263B7EF700E032AF /* Student.swift in Sources */,
 				F7A2AB6C263A6EB100789114 /* TeamHistoryView.swift in Sources */,
 			);

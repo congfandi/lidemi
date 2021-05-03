@@ -8,43 +8,45 @@
 import SwiftUI
 import AuthenticationServices
 struct SignInView: View {
+    
+   @ObservedObject private var globalState:GlobalViewModel
+    
+    init(globalState:GlobalViewModel) {
+        self.globalState = globalState
+    }
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationView{
-            ZStack{
-                Color.black.ignoresSafeArea()
                 VStack{
                     Spacer()
                     SplashView()
                     Spacer()
-                        HStack{
-                            Button(action: {
-                                   let provider = ASAuthorizationAppleIDProvider()
-                                   let request = provider.createRequest()
-                                   request.requestedScopes = [.fullName, .email]
-                                   let controller = ASAuthorizationController(authorizationRequests: [request])
-                                   controller.performRequests()
-                                   //
-                                print("yang login \(String(describing: request.user))")
-                            }) {
-                                HStack{
-                                    Image(systemName: "applelogo").foregroundColor(.white)
-                                    Text("Sign In With Apple")
-                                        .fontWeight(.bold)
-                                        .font(.body)
-                                        .foregroundColor(.white)
-                                }
+                    SignInWithAppleButton(.signIn,              //1
+                          onRequest: { (request) in             //2
+                            //Set up request
+                          },
+                          onCompletion: { (result) in           //3
+                            switch result {
+                            case .success(_):
+                                globalState.loginType = LoginType.Authorize
+                                break
+                            case .failure(_):
+                                //Handle error
+                                break
                             }
-                        }.padding()
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color.white, lineWidth: 3)
-                        )
-                    Text("Or").foregroundColor(.white).padding(.vertical)
-                    Button(action:{}){
+                          })
+                        .foregroundColor(Color.init("primary"))
+                        .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
+                        .frame(width: 200.0, height: 60.0)
+                        
+                    Text("Or").padding(.vertical)
+                    Button(action:{
+                        globalState.loginType = LoginType.Guest
+                    }){
                         Text("Continue as Guest")
                     }
                     Spacer()
-                    Text("By  Sign In, you have been agree our").foregroundColor(.white)
+                    Text("By  Sign In, you have been agree our")
                     NavigationLink(
                         destination: TermAndServiceView()){
                         Text("Term and Service")
@@ -52,11 +54,10 @@ struct SignInView: View {
                 }
             }.navigationBarHidden(true)
         }
-    }
 }
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView()
+        SignInView(globalState: GlobalViewModel())
     }
 }

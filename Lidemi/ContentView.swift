@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var isActive:Bool = false
+    @ObservedObject private var globalState:GlobalViewModel = GlobalViewModel()
         
         var body: some View {
-                ZStack{
-                    Color.black.ignoresSafeArea()
                     VStack {
-                        if self.isActive {
-//                          SignInView()
-                            MainView()
+                        if self.globalState.isActive {
+                            if(globalState.loginType == LoginType.Guest || globalState.loginType == LoginType.Authorize){
+                                MainView(globalState: globalState)
+                            }else{
+                                SignInView(globalState: globalState)
+                            }
                         } else {
                             SplashView()
                         }
@@ -25,13 +25,11 @@ struct ContentView: View {
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                             withAnimation {
-                                self.isActive = true
+                                self.globalState.isActive = true
                             }
                         }
                     }
                 }
-        }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {

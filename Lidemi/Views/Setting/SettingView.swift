@@ -11,6 +11,7 @@ struct SettingView: View {
     @State private var showGreeting = true
     @State private var showSignOutAlert = false
     @State private var showDeleteAlert = false
+    @EnvironmentObject var globalState:GlobalViewModel
     var body: some View {
         NavigationView {
                 List{
@@ -34,6 +35,7 @@ struct SettingView: View {
                             Text("About App")
                         }
                     }
+                    if(globalState.loginType == LoginType.Authorize){
                     Spacer()
                     NavigationLink(destination:ProfileView()){
                         HStack{
@@ -61,9 +63,10 @@ struct SettingView: View {
                     }
                     .alert(isPresented: $showSignOutAlert) {
                         Alert(title: Text("Sign Out"), message: Text("Ahhh! we will miss you"), primaryButton: .cancel(),secondaryButton: .destructive(Text("SignOut").foregroundColor(.red),action:{
-                            print("SignOut")
+                            globalState.loginType = LoginType.Unauthorize
                         })
                         )
+                    }
                     }
                 }.padding(.top)
                 .navigationBarTitle("Setting")

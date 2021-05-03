@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct MainView: View {
+    private var globalState:GlobalViewModel
+    init(globalState:GlobalViewModel) {
+        self.globalState = globalState
+    }
     var body: some View {
         ZStack{
             TabView {
@@ -31,13 +35,13 @@ struct MainView: View {
                      Image(systemName: "gear")
                      Text("Setting")
                    }
-            }
+            }.environmentObject(globalState)
         }.navigationBarHidden(true)
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(globalState:GlobalViewModel())
     }
 }
