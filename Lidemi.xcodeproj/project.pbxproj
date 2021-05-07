@@ -18,6 +18,7 @@
 		F715C2D9263EF62A00E032AF /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715C2D8263EF62A00E032AF /* FilterView.swift */; };
 		F75332CA2638F1A2009DDF3B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75332C92638F1A2009DDF3B /* SignInView.swift */; };
 		F75332DD2638F85F009DDF3B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75332DC2638F85F009DDF3B /* SplashView.swift */; };
+		F772C0502640FFEE0067D182 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F772C04F2640FFEE0067D182 /* Storyboard.storyboard */; };
 		F7847BCE2638FE9C00AC5060 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7847BCD2638FE9C00AC5060 /* MainView.swift */; };
 		F7847C13263930FD00AC5060 /* TermAndServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7847C12263930FD00AC5060 /* TermAndServiceView.swift */; };
 		F7847C182639382F00AC5060 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7847C172639382F00AC5060 /* TeamView.swift */; };
@@ -66,6 +67,7 @@
 		F715C2D8263EF62A00E032AF /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		F75332C92638F1A2009DDF3B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		F75332DC2638F85F009DDF3B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		F772C04F2640FFEE0067D182 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		F7847BCD2638FE9C00AC5060 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F7847C12263930FD00AC5060 /* TermAndServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermAndServiceView.swift; sourceTree = "<group>"; };
 		F7847C172639382F00AC5060 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 		F7998DCF2637CD53003804BB = {
 			isa = PBXGroup;
 			children = (
+				F772C04F2640FFEE0067D182 /* Storyboard.storyboard */,
 				F7998DDA2637CD53003804BB /* Lidemi */,
 				F7998DEC2637CD54003804BB /* LidemiTests */,
 				F7998DF72637CD54003804BB /* LidemiUITests */,
@@ -421,6 +424,7 @@
 			files = (
 				F7998DE32637CD54003804BB /* Preview Assets.xcassets in Resources */,
 				F7998DE02637CD54003804BB /* Assets.xcassets in Resources */,
+				F772C0502640FFEE0067D182 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
